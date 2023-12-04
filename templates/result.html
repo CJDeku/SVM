@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+    <title>Image Classifier Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="header container">
-        <h1>Error</h1>
+        <h1>Result</h1>
     </div>
     <div class="container result-container">
-        <p>An error occurred: {{ error_message }}</p>
-        {% if error_details %}
-            <p>Error details: {{ error_details }}</p>
-        {% endif %}
+        <p>Prediction: {{ prediction_label }}</p>
+        <p>Probability of Cat: {{ probability_cat }}</p>
+        <p>Probability of Dog: {{ probability_dog }}</p>
         <a href="/">Go back</a>
     </div>
 </body>
